@@ -9,7 +9,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
+        <svg class="bi bi-chevron-right" width="32" height="32" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z"/></svg>
+    <link rel="stylesheet" href="./bootstrap-icons.svg">
     <title>CyberXERX</title>
 </head>
 
@@ -115,9 +116,8 @@
             </a>
         </div>
     </div>
-    
-    <div id="loginModal" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-lg" role="content">
+    <div id="loginModal" class="modal fade " role="dialog">
+        <div class="modal-dialog modal-sm" role="content">
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="model-title">Login</h4>
@@ -125,49 +125,78 @@
 
                 </div>
                 <div class="modal-body">
-                    <form class="form-signin" _lpchecked="1">
-                        <img class="mb-4" src="/docs/4.5/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-                        <h1 class="h3 mb-3 font-weight-normal">Please Sign in</h1>
-                        <label for="inputEmail" class="sr-only">Email address</label>
-                        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="" autocomplete="off">
-                        <label for="inputPassword" class="sr-only">Password</label>
-                        
-                        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="" autocomplete="off">
-                        <div class="col-sm-auto">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox">
-                                <label class="form-label-check">Remember me</label>
+                    <form>
+                        <div class="form-row ">
+                            <h4>Please Sign-in</h4><br>
+                        </div>
+                        <div><br></div>
+                        <div class="form-row ">
+                            <div class="form-group col" >
+                                    <label class="sr-only" for="exampleInputpass">Username</label>
+                                    <input type="email" class="form-control form-control-sm mr-1" id="email" name="email" placeholder="email">
                             </div>
                         </div>
-                        <p class="mt-5 mb-3 text-muted">CyberXERX© 2020</p>
-                      </form>
+                        <div class="form-row ">
+                            <div class="form-group col">
+                                <label class="sr-only" for="exampleInputpass">Password</label>
+                            
+                                <input type="password" class="form-control form-control-sm mr-1" id="password" name="password" placeholder="password">
+                            </div>
+                        </div>
+                        <div class="form-row ">
+                            <div class="col-sm-auto">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-label-check">Remember me</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
+
+                        </div>
+
+
+                    </form>
+
                 </div>
             </div>
         </div>
     </div>
- 
-    <div id="signupModal" class="modal fade" role="dialog">
+    <div id="signupModal" class="modal fade " role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="model-title">SignUp</h4>
+                    <h4 class="model-title">Signup</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
 
                 </div>
                 <div class="modal-body">
-                    <form class="form-signin" _lpchecked="1">
-                        <div class="text-center mb-4">
+                    <form>
+                        <div class="form-row ">
+                            <h4>Create an Account</h4><br>
+                        </div>
+                        <div><br></div>
+                        <div class="form-group row">
+                            
+                            <label for="firstname" class="col-md-2 col-form-label">Full Name</label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Full Name">
+                            </div>
+                            
+                        
                         </div>
                         <div class="form-group row">
-                            <label for="firstname" class="col-md-2 col-form-label">First Name</label>
+                            <label for="emailid" class="col-md-2 col-form-label">Email</label>
                             <div class="col-md-10">
-                                <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First Name">
+                                <input type="email" class="form-control" id="emailid" name="emailid" placeholder="Email">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="lastname" class="col-md-2 col-form-label">Last Name</label>
+                            <label for="sr-only" class="col-md-2 col-form-label">Password</label>
                             <div class="col-md-10">
-                                <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last Name">
+                                <input type="text" class="form-control" id="lastname" name="password" placeholder="password">
                             </div>
                         </div>
                         <div class="form-group row">
@@ -179,28 +208,30 @@
                                 <input type="tel" class="form-control" id="telnum" name="telnum" placeholder="Mobile no.">
                             </div>
                         </div>
-                        <div class="form-label-group">
-                          <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAkCAYAAADo6zjiAAAAAXNSR0IArs4c6QAAAbNJREFUWAntV8FqwkAQnaymUkpChB7tKSfxWCie/Yb+gbdeCqGf0YsQ+hU95QNyDoWCF/HkqdeiIaEUqyZ1ArvodrOHxanQOiCzO28y781skKwFW3scPV1/febP69XqarNeNTB2KGs07U3Ttt/Ozp3bh/u7V7muheQf6ftLUWyYDB5yz1ijuPAub2QRDDunJsdGkAO55KYYjl0OUu1VXOzQZ64Tr+IiPXedGI79bQHdbheCIAD0dUY6gV6vB67rAvo6IxVgWVbFy71KBKkAFaEc2xPQarXA931ot9tyHphiPwpJgSbfe54Hw+EQHMfZ/msVEEURjMfjCjbFeG2dFxPo9/sVOSYzxmAwGIjnTDFRQLMQAjQ5pJAQkCQJ5HlekeERxHEsiE0xUUCzEO9AmqYQhiF0Oh2Yz+ewWCzEY6aYKKBZCAGYs1wuYTabKdNNMWWxnaA4gp3Yry5JBZRlWTXDvaozUgGTyQSyLAP0dbb3DtQlmcan0yngT2ekE9ARc+z4AvC7nauh9iouhpcGamJeX8XF8MaClwaeROWRA7nk+tUnyzGvZrKg0/40gdME/t8EvgG0/NOS6v9NHQAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
-                          <label for="inputEmail"></label>
+                        
+                        <div class="form-row ">
+                            <div class="col-sm-auto">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-label-check">Remember me</label>
+                                </div>
+                            </div>
                         </div>
-                      
-                        <div class="form-label-group">
-                          <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAkCAYAAADo6zjiAAAAAXNSR0IArs4c6QAAAbNJREFUWAntV8FqwkAQnaymUkpChB7tKSfxWCie/Yb+gbdeCqGf0YsQ+hU95QNyDoWCF/HkqdeiIaEUqyZ1ArvodrOHxanQOiCzO28y781skKwFW3scPV1/febP69XqarNeNTB2KGs07U3Ttt/Ozp3bh/u7V7muheQf6ftLUWyYDB5yz1ijuPAub2QRDDunJsdGkAO55KYYjl0OUu1VXOzQZ64Tr+IiPXedGI79bQHdbheCIAD0dUY6gV6vB67rAvo6IxVgWVbFy71KBKkAFaEc2xPQarXA931ot9tyHphiPwpJgSbfe54Hw+EQHMfZ/msVEEURjMfjCjbFeG2dFxPo9/sVOSYzxmAwGIjnTDFRQLMQAjQ5pJAQkCQJ5HlekeERxHEsiE0xUUCzEO9AmqYQhiF0Oh2Yz+ewWCzEY6aYKKBZCAGYs1wuYTabKdNNMWWxnaA4gp3Yry5JBZRlWTXDvaozUgGTyQSyLAP0dbb3DtQlmcan0yngT2ekE9ARc+z4AvC7nauh9iouhpcGamJeX8XF8MaClwaeROWRA7nk+tUnyzGvZrKg0/40gdME/t8EvgG0/NOS6v9NHQAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
-                          <label for="inputPassword"></label>
+                        <div class="form-row">
+                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-sm ml-1">Sign up</button>
+
                         </div>
-                      
-                        <div class="checkbox mb-3">
-                          <label>
-                            <input type="checkbox" value="remember-me"> Remember me
-                          </label>
-                        </div>
-                        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-                        <p class="mt-5 mb-3 text-muted text-center">CyberXERX© 2020</p>
-                      </form>
+
+
+                    </form>
+
                 </div>
             </div>
         </div>
     </div>
+ 
+    
     
     
     <!-- Jumbotron-->
@@ -217,8 +248,7 @@
         </div>
 
     </header>
-
-
+    
 <!-- body blog post update-->
     <div class="container my-4">
         <div class="row mb-2 __web-inspector-hide-shortcut__">
@@ -332,8 +362,7 @@
             </div>
         </div>
     </div>
-
-
+   
 </body>
 <!-- Footer-->
 <footer class="footer  p-3 bg-dark text-white">
@@ -362,6 +391,10 @@
             </div>
         </div>
     </div>
+    
+    
+
+
 </footer>
 
 </html>
